@@ -1,0 +1,12 @@
+pipeline {
+    agent {label 'Agent-2'}
+
+    stages {
+        stage('Hello') {
+            steps {
+                git branch: 'main', credentialsId: 'Git-credentials-for-pramod', url: 'https://github.com/pramod2007m/testrepo.git'
+                echo 'Hello World'
+            }
+        }
+    }
+}
