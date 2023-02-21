@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                git branch: 'main', credentialsId: 'Git-credentials-for-pramod', url: 'https://github.com/pramod2007m/testrepo.git'
+                git branch: 'test', credentialsId: 'Git-credentials-for-pramod', url: 'https://github.com/pramod2007m/testrepo.git'
                 echo 'Hello World'
             }
         }
